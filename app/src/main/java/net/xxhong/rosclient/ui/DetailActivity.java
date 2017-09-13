@@ -161,7 +161,7 @@ public class DetailActivity extends Activity {
                     msg = "{\"op\":\"publish\",\"topic\":\"" + detailName + "\",\"msg\":{"+data+"}}";
                     client.send(msg);
                 } else if(detailType.equalsIgnoreCase("service")) {
-                    msg = "{\"op\":\"call_service\",\"service\":\"" + detailName + "\",\"args\":["+data+"]}";
+                    msg = "{\"op\":\"call_service\",\"service\":\"" + detailName + "\",\"args\":{"+data+"}}";
                     client.send(msg);
                 }
 
